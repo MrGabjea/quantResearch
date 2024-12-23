@@ -10,9 +10,9 @@ import ta
 
 
 # Clés API
-api_key = 'bg_669bde1227d59de7a29045ddd94398c4'
-secret_key = 'df592a14c15d7b48832731745ed4de25e608ef19ddc2d7c1a4ac1e1186c8fa10'
-passphrase = 'KangouQuant07'
+api_key = ''
+secret_key = ''
+passphrase = ''
 
 ######################################################################################################################
 #%%      DEF FONCTIONS : PARTIE DATA
