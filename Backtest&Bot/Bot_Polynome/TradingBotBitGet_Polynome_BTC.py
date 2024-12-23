@@ -9,9 +9,9 @@ import base64
 
 
 # Clés API
-api_key = 'bg_ca4636c7cb4d7b3f23a7039fa8a26069'
-secret_key = '34b906f5f76811bcf43e18bc0fc60b51c218ce25c3294c7511f13ab81145e136'
-passphrase = 'KangouQuant007'
+api_key = ''
+secret_key = ''
+passphrase = ''
 
 ######################################################################################################################
 #%%      DEF FONCTIONS : PARTIE DATA
