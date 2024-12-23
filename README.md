@@ -4,5 +4,8 @@ This repository contains some of the ideas I developed in Python related to **qu
 ## Contents
 - **/Tools**  
   Useful tools for data visualization, collection, and analysis.  
-- **/TradingBot_Template**  
+- **/TradingBotTemplate**  
   Templates and pre-implemented solutions for various types of trading bots.
+- **/Backtest&Bot**  
+  Backtests of various strategies and corresponding bots.
+  
