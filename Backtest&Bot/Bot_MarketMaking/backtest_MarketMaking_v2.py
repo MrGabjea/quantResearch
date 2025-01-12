@@ -44,6 +44,8 @@ for i in range(len(df)):
     
     
     if Sold == [] and Bought ==[]:
+        Sell=[]
+        Buy=[]
         Sell.append((1+n)*df['openPrice'][i])
         Buy.append((1-n)*df['openPrice'][i])
         
