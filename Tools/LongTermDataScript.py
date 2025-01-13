@@ -4,8 +4,7 @@ import pandas as pd
 import numpy as np
 import requests
 import matplotlib.pyplot as plt
-import ta
-from ta.momentum import RSIIndicator
+
 #%%
 def get_data(session, n, nom_crypto, intervale, time): 
     res = (session.get_mark_price_kline(
@@ -28,7 +27,7 @@ def get_data(session, n, nom_crypto, intervale, time):
     df['high'] = df['high'].astype(float)
     df['low'] = df['low'].astype(float)
     df['closePrice'] = df['closePrice'].astype(float)
-    df['time'] = df['time'].astype(float)
+    #df['time'] = df['time'].astype(float)
 
     return df
 
@@ -50,13 +49,13 @@ def get_historical_data(session, n, nom_crypto, intervale, start_time, num_batch
         all_data.append(batch_data)
         
         # Mettre à jour endTime pour remonter dans le passé
-        end_time = batch_data['time'].iloc[-1] - 1  # Prend le dernier timestamp et le diminue de 1
+        end_time = batch_data['time'].iloc[0]   # Prend le dernier timestamp et le diminue de 1
 
     # Concaténer tous les DataFrames dans un seul DataFrame
     result = pd.concat(all_data, axis=0).reset_index(drop=True)
-    
-    return result
+    res = result.sort_values(by='time').drop_duplicates(subset='time').reset_index(drop=True)
+    return res
 
 #%%
 
-df = get_historical_data(session, 1000, 'BTCUSDT', 5, 1734624900000 , 5)
+df = get_historical_data(session, 1000, 'DOGEUSDT', 5, 1736425800000 , 10)
